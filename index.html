@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="AnestWebApp" ng-cloak>
+    <head>
+        <base href="/">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AnestWeb</title>
+
+        <!-- Mobile Meta Tags -->
+        <meta name="theme-color" content="#b71c1c">
+        <meta name="msapplication-navbutton-color" content="#b71c1c">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="icon" href="/assets/img/appicon.png" sizes="128x128">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="/lib/font-awesome-4.5.0/css/font-awesome.css" type="text/css">
+        <link rel="stylesheet" href="/lib/flaticon-medical/flaticon.css" type="text/css">
+        <link rel="stylesheet" href="/lib/pace-1.0.0/pace.flat-top.css" media="screen" type="text/css">
+        <link rel="stylesheet" href="/dist/anestweb.min.css" media="screen" type="text/css">
+    </head>
+    <body>
+        <div id="wrapper-all">
+            <header>
+                <a ng-href="/"><img src="/assets/img/applogo.png" alt="AnestWeb" class="applogo"></a>
+                <div class="options" ng-controller="UsuarioCtrl">
+                    <div class="userinfo item">
+                        <i class="fa fa-user-md fa-fw fa-lg"></i> {{usuario.nome}}<br>
+                        <small>CRM {{usuario.crm}}</small>
+                    </div>
+                    <div class="item">
+                        <a href="#/login" class="flat inverse button"><i class="fa fa-power-off fa-fw"></i> Sair</a>
+                    </div>
+                </div>
+            </header>
+
+            <div id="wrapper-main">
+                <aside class="sidebar">
+                    <nav class="sidebar-menu" ng-controller="NavMenuCtrl">
+                        <a ng-href="{{item.link}}" ng-repeat="item in items">
+                            <i class="{{item.icon}}"></i>
+                            <span>{{item.text}}</span>
+                        </a>
+                    </nav>
+                </aside>
+
+                <div class="page-content" ng-view>
+                    <p>Por favor, escolha uma opção no menu à esquerda para prosseguir&hellip;</p>
+                </div>
+            </div>
+        </div>
+
+        <script defer src="/lib/pace-1.0.0/pace.min.js"></script>
+        <script src="/lib/angular-1.5.3/angular.min.js"></script>
+        <script src="/lib/angular-1.5.3/angular-route.min.js"></script>
+        <script src="/dist/anestweb.min.js"></script>
+    </body>
+</html>

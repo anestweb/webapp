@@ -1,0 +1,26 @@
+<h1 class="pageheading">
+    Catálogo de Patologias
+
+    <div class="right floated">
+        <a ng-href="/patologias/novo" class="primary button"><i class="fa fa-plus fa-fw"></i>Nova Patologia</a>
+    </div>
+</h1>
+<table class="selectable">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-hide="patologias.length > 0">
+            <td colspan="2">
+                Não há patologia cadastrada para esta listagem.
+            </td>
+        </tr>
+        <tr ng-show="patologias.length > 0" ng-repeat="patologia in patologias">
+            <td>{{patologia.id}}</td>
+            <td>{{patologia.descricao}}</td>
+        </tr>
+    </tbody>
+</table>

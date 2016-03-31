@@ -1,0 +1,42 @@
+{
+  "name": "@anestweb/anestweb",
+  "version": "1.0.0",
+  "description": "Aplicação cliente do projeto AnestWeb.",
+  "keywords": [
+    "anestweb"
+  ],
+  "scripts": {
+    "prestart": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anestweb/webapp.git"
+  },
+  "author": "The contributors",
+  "contributors": [
+    "Jonathan Souza <jonathan.ralison@gmail.com> (http://www.jralison.com/)",
+    "Vinicius Viana <vinny_vv@live.com>",
+    "Neto Andrade <andneto@hotmail.com>",
+    "Arleson Reis <arleson.reis@gmail.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/anestweb/webapp/issues"
+  },
+  "homepage": "https://github.com/anestweb/webapp#readme",
+  "license": "Apache-2.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cli": "^1.2.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}
